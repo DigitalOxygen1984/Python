@@ -1,6 +1,5 @@
 from auto import *
 from auto_garage import *
-from vrachtwagen import *
 import datetime
 
 auto1 = Auto('Audi')
@@ -11,8 +10,7 @@ garage = Garage()
 
 garage.bepaalOnderhoud(auto1)
 
-vrachtwagen = Vrachtwagen()
-print(vrachtwagen.kilometerstand)
+
 
 # print('de APK keuringsdatum was', auto1.apk_keuringsdatum)
 

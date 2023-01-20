@@ -1,0 +1,30 @@
+import math
+
+#
+# invoer gegevens
+#
+def invoer():
+    aantal_mensen = int(input("Hoeveel mensen eten? "))
+    aantal_stukken = float(input("Hoeveel stukken per persoon? "))
+    aantal_stukken_in_pizza = int(input("Hoeveel stukken per pizza? "))
+#
+# berekening gegevens
+#
+def berekenen(aantal_mensen, aantal_stukken, aantal_stukken_in_pizza):
+    totaal_benodigde_stukken = aantal_mensen * aantal_stukken
+    benodigde_pizzas = math.ceil(totaal_benodigde_stukken / aantal_stukken_in_pizza)
+    overgebleven_stukken = (benodigde_pizzas * aantal_stukken_in_pizza) - totaal_benodigde_stukken
+
+#
+# console output
+#
+def output(benodigde_pizzas, aantal_mensen, overgebleven_stukken):
+    print("Je hebt", benodigde_pizzas ,"pizza's nodig om", aantal_mensen ,"mensen te voeden." )
+    print('Er zullen nog', overgebleven_stukken ,'stukken overblijven')
+
+def main():
+    invoer()
+    berekenen()
+    output()
+
+main()

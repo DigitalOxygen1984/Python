@@ -1,10 +1,8 @@
-from voertuig import Voertuig
-
-class Auto(Voertuig):
+class Auto():
     def __init__(self, merk):
-        self.kenteken=''
         self.merk = merk
-        self.apk_keuringsdatum = ''
+        self.snelheid = 0
+        self.kilometerstand = 0
     def rijden(self):
         self.snelheid = 50
     def stoppen(self):
